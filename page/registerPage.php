@@ -16,7 +16,7 @@ EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="a
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container">
             <!-- Nama : nama panggilan kalian -->
-            <a class="navbar-brand fw-bold" href="/gd4_x_yyyy">PHP - Nama</a>
+            <a class="navbar-brand fw-bold" href="/GD4_C_0780">PHP - Christo</a>
         </div>
     </nav>
     <div class="bg bg-light text-dark">
@@ -55,13 +55,16 @@ select example" name="membership" id="membership">
                             <button type="submit" class="btn btn-primary" name="register">Register</button>
                         </div>
                     </form>
-                    <p class="mt-2 mb-0">Have an account? <a href="./loginPage.php" class="text-primary">Login here!</a></p>
+                    <p class="mt-2 mb-0">Have an account? <a href="./loginPage.php" class="text-primary">Login here!</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

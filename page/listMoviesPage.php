@@ -8,6 +8,10 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
     <div class="body d-flex justify-content-between">
         <h4>LIST MOVIE</h4>
     </div>
+    <div class="content-menu ">
+        <i href="./createMoviesPage.php" style="color:red" class="fa fa-plus-square"></i>
+        <a href="./createMoviesPage.php" style="color:black" style="font-weight:800">Create Movies</a>
+    </div>
     <hr>
     <table class="table ">
         <thead>
@@ -38,6 +42,7 @@ die(mysqli_error($con));
                     <td>'.$data['realese'].'</td>
                     <td>'.$data['season'].'</td>
                     <td>
+                    <a href="./editMoviesPage.php?id=' . $data['id'] . '"><i style="color: green" class="fa fa-edit"></i></a>
                         <a href="../process/deleteMovieProcess.php?id='.$data['id'].'"
 onClick="return confirm ( \'Are you sure want to delete this 
 data?\')">                          <i style="color: red" class="fa fa-trash fa-2x"></i>
