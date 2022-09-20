@@ -43,7 +43,7 @@ die(mysqli_error($con));
                     <td>'.$data['season'].'</td>
                     <td>
                     <a href="./editMoviesPage.php?id=' . $data['id'] . '"><i style="color: green" class="fa fa-edit"></i></a>
-                        <a href="../process/deleteMovieProcess.php?id='.$data['id'].'"
+                        <a href="../process/deleteMoviesProcess.php?id='.$data['id'].'"
 onClick="return confirm ( \'Are you sure want to delete this 
 data?\')">                          <i style="color: red" class="fa fa-trash fa-2x"></i>
                         </a>
