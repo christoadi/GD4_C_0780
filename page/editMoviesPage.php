@@ -30,7 +30,7 @@ $synopsisMovies = $data["synopsis"];
                     $genreSelect = $_SESSION['genreMovies'];
                     foreach($array as $value=>$name)
                     {
-                        if($name == $moviesSelect)
+                        if($name == $genreSelect)
                         {
                              echo "<option selected value='".$name."'>".$name."</option>";
                         }
