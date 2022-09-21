@@ -25,7 +25,7 @@ $synopsisMovies = $data["synopsis"];
             <label for="exampleInputEmail1" class="form-label">Genre</label>
             <select class="form-select" aria-label="Default select example" name="genre" id="genre">
                 <?php
-                    $array = array("Romantic", "Action", "Movies");
+                    $array = array("Romantic", "Action", "Fiction");
                     session_start();
                     $genreSelect = $_SESSION['genreMovies'];
                     foreach($array as $value=>$name)
