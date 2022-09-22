@@ -1,6 +1,11 @@
 <?php
 include '../component/sidebar.php'
 ?>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
 <div class="container p-3 m-4 h-100"
     style="background-color: #FFFFFF; border-top: 5px solid #17337A; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <h4>Create Series</h4>
@@ -16,12 +21,14 @@ include '../component/sidebar.php'
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Genre</label>
-            <select class="form-select" aria-label="Default select example" name="genre" id="genre">
+            <select class="form-select" aria-label="multiple select example" name="genre[]" id="genre"
+                multiple>
                 <option value="Thriller">Thriller</option>
                 <option value="Comedy">Comedy</option>
                 <option value="Fantasy">Fantasy</option>
             </select>
         </div>
+            
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Release</label>
             <input class="form-control" id="realease" name="realease" aria-describedby="emailHelp">

@@ -11,6 +11,7 @@ $realeseMovies = $data["realese"];
 $seasonMovies = $data["season"];
 $synopsisMovies = $data["synopsis"];
 ?>
+
 <div class="container p-3 m-4 h-100"
     style="background-color: #FFFFFF; border-top: 5px solid #17337A; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <h4>Edit Movies</h4>
