@@ -9,7 +9,7 @@ if (isset($_POST['edit'])) {
     // tampung nilai yang ada di from ke variabel
     // sesuaikan variabel name yang ada di registerPage.php disetiap input
     $name = $_POST['name'];
-    $genre = $_POST['genre'];
+    $genre = implode(", ", $_POST["genre"]);
     $realease = $_POST['realease'];
     $episode = $_POST['episode'];
     $season = $_POST['season'];
@@ -17,7 +17,7 @@ if (isset($_POST['edit'])) {
     // Melakukan insert ke databse dengan query dibawah ini
     $query = mysqli_query(
         $con,
-        "UPDATE movies SET name = '$name', genre = '$genre', 
+        "UPDATE series SET name = '$name', genre = '$genre', 
         realease = '$realease', episode = '$episode', season = '$season', synopsis = '$synopsis' WHERE id='$id'"
     )
         or die(mysqli_error($con)); // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”

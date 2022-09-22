@@ -8,7 +8,8 @@ if (isset($_POST['register'])) {
     // tampung nilai yang ada di from ke variabel
     // sesuaikan variabel name yang ada di registerPage.php disetiap input
     $name = $_POST['name'];
-    $genre = $_POST['genre'];
+    // $genre = $_POST['genre'];
+    $genre = implode(", ", $_POST["genre"]);
     $realease = $_POST['realease'];
     $episode = $_POST['episode'];
     $season = $_POST['season'];

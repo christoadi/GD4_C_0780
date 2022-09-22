@@ -25,7 +25,8 @@ $synopsisSeries = $data["synopsis"];
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Genre</label>
-            <select class="form-select" aria-label="Default select example" name="genre" id="genre">
+            <select class="form-select" aria-label="multiple select example" name="genre[]" id="genre"
+                multiple>
                 <?php
                     $array = array("Thriller", "Comedy", "Fantasy");
                     session_start();
