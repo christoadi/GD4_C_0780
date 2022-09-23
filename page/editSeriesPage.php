@@ -35,7 +35,7 @@ die(mysqli_error($con));
                 <tr>
                 <td>
                     <td>'.$data['genre'].'</td>   
-                </td>                
+                </td>                `
                 </tr>';
             }  
             
