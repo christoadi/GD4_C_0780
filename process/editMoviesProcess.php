@@ -38,3 +38,14 @@ if (isset($_POST['edit'])) {
  window.history.back()
  </script>';
 }
+
+function showSelectedSerie($id)
+{
+    include '../db.php';
+    $query = "SELECT * FROM series WHERE id='$id'";
+    $result = mysqli_query($con, $query);
+
+    $row = mysqli_fetch_assoc($result);
+
+    return $row;
+}

@@ -12,42 +12,36 @@ $name = $_POST['name'];
 $phonenum = $_POST['phonenum'];
 $membership = $_POST['membership'];
 
-$isEmailAlready = "SELECT email from users WHERE email='$email'";
-$checkEmail = mysqli_query($con, $isEmailAlready);
-
-if($checkEmail){
-    echo
-    '<script>
-    alert("Register Failed, Email Already Taken");
-    window.location = "../index.php"
-    </script>';
-
-    return;
-}
+$isEmailAlready = mysqli_query($con, "SELECT * FROM users WHERE email = '$email'") or die(mysqli_error($con));
 
 // Melakukan insert ke databse dengan query dibawah ini
-$query = mysqli_query($con,
-"INSERT INTO users(email, password, name, phonenum, membership)
-VALUES
-('$email', '$password', '$name', '$phonenum', '$membership')")
-or die(mysqli_error($con)); // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”
-if(mysqli_num_rows($res_u) > 0){
+if(mysqli_num_rows($isEmailAlready) == 0){
+    $query = mysqli_query($con,
+    "INSERT INTO users(email, password, name, phonenum, membership)
+        VALUES
+            ('$email', '$password', '$name', '$phonenum', '$membership')")
+                or die(mysqli_error($con)); 
+
+    if($query){
+        echo
+            '<script>
+            alert("Register Success");
+            window.location = "../index.php"
+            </script>';
+    }else{
+        echo
+            '<script>
+            alert("Register Failed");
+            </script>';
+    }
+}else{
     echo
     '<script>
-    alert("Register Failed");
+        alert("Email Already Taken!!");
+        window.location = "../page/registerPage.php";
     </script>';
-}else if($query){
-echo
-'<script>
-alert("Register Success");
-window.location = "../index.php"
-</script>';
-}else{
-echo
-'<script>
-alert("Register Failed");
-</script>';
 }
+
 }else{
 echo
 '<script>

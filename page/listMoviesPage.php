@@ -5,27 +5,27 @@
 solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
 0.19);">
 
-    <div class="body d-flex justify-content-between">
-        <h4>LIST MOVIES</h4>
-        <div class="content-menu ">
-            <a href="./createMoviesPage.php" style="color:red" class="fa fa-plus-square"></a>
-        </div>
+  <div class="body d-flex justify-content-between">
+    <h4>LIST MOVIES</h4>
+    <div class="content-menu ">
+      <a href="./createMoviesPage.php" style="color:red" class="fa fa-plus-square"></a>
     </div>
+  </div>
 
-    <hr>
-    <table class="table ">
-        <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Genre</th>
-                <th scope="col">Realese</th>
-                <th scope="col">Season</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
+  <hr>
+  <table class="table ">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Realese</th>
+        <th scope="col">Season</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
             $query = mysqli_query($con, "SELECT * FROM movies") or
 die(mysqli_error($con));
             if (mysqli_num_rows($query) == 0) {
@@ -42,8 +42,7 @@ die(mysqli_error($con));
                     <td>'.$data['season'].'</td>
                     <td>
                     <a href="./editMoviesPage.php?id=' . $data['id'] . '"><i style="color: green" class="fa fa-edit"></i></a>
-                        <a href="../process/deleteMoviesProcess.php?id='.$data['id'].'"
-onClick="return confirm ( \'Are you sure want to delete this 
+                        <a href="../process/deleteMoviesProcess.php?id='.$data['id'].'"onClick="return confirm ( \'Are you sure want to delete this 
 data?\')">                          <i style="color: red" class="fa fa-trash fa-2x"></i>
                         </a>
                     </td>
@@ -52,12 +51,12 @@ data?\')">                          <i style="color: red" class="fa fa-trash fa-
             }
         }
         ?>
-        </tbody>
-    </table>
+    </tbody>
+  </table>
 </div>
 </aside>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>
 </body>
 
